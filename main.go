@@ -191,7 +191,8 @@ func main() {
 				continue
 			}
 
-			resp, err := http.Get(img.URLBig)
+			fullSizedImageUrl := fmt.Sprintf("%s/%dx%d/%s", img.Prefix, img.Width, img.Height, img.Key)
+			resp, err := http.Get(fullSizedImageUrl)
 			if err != nil {
 				fmt.Println("Error downloading image:", err)
 				continue
