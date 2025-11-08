@@ -40,6 +40,12 @@ google-chrome --remote-debugging-port=9222
 go run ./*.go --email you@example.com --password yourpassword --childid <child-id> --latitude <lat> --longitude <lon>
 ```
 
+On MacOS, you'll need to run: 
+```sh
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222 --user-data-dir=./chrome_data/
+go run ./*.go --email you@example.com --password yourpassword --childid <child-id> --latitude <lat> --longitude <lon>
+```
+
 The `childid` you can take from the URL when viewing your child's profile/activity page, for example `https://app.nfamilyclub.com/#/account/childProfile/afacb3b1-054a-4da3-9220-a1bfa85ec28c/activity`.
 
 
